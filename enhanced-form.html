@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML5 Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+        }
+        h1, h2 {
+            color: #1c5ea0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-top: 20px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            padding: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        video, audio {
+            margin: 20px 0;
+            max-width: 100%;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Advanced HTML week 2</h1>
+        <p>This page showcases advanced HTML5 features including lists, tables, media, and forms with validation.</p>
+    </header>
+
+    <section id="lists">
+        <h2>Lists in HTML5</h2>
+        
+        <h3>Unordered List (Features)</h3>
+        <ul>
+            <li>Semantic HTML5 elements</li>
+            <li>Advanced form controls</li>
+            <li>Native validation</li>
+            <li>Media embedding</li>
+        </ul>
+        
+        <h3>Ordered List (Steps to Success)</h3>
+        <ol>
+            <li>Learn HTML5 fundamentals</li>
+            <li>Practice semantic markup</li>
+            <li>Master forms and validation</li>
+            <li>Build accessible websites</li>
+        </ol>
+        
+        <h3>Description List (HTML5 Terms)</h3>
+        <dl>
+            <dt>Semantic Elements</dt>
+            <dd>Elements like &lt;header&gt;, &lt;footer&gt;, &lt;article&gt; that clearly describe their meaning.</dd>
+            
+            <dt>Form Validation</dt>
+            <dd>The process of ensuring user input meets specified requirements before submission.</dd>
+            
+            <dt>ARIA</dt>
+            <dd>Accessible Rich Internet Applications - attributes to enhance accessibility.</dd>
+        </dl>
+    </section>
+
+    <section id="tables">
+        <h2>Tables in HTML5</h2>
+        <table>
+            <caption>Course Schedule</caption>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Course</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>9:00 - 11:00</td>
+                    <td>HTML5 Fundamentals</td>
+                    <td>Dr. Smith</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>13:00 - 15:00</td>
+                    <td>CSS Styling</td>
+                    <td>Prof. Johnson</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>10:00 - 12:00</td>
+                    <td>JavaScript Basics</td>
+                    <td>Dr. Williams</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">All courses are held in Building A, Room 101</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>Media in HTML5</h2>
+        
+        <h3>Image with Figure and Caption</h3>
+        <figure>
+            <img src="https://via.placeholder.com/600x300" alt="Placeholder image demonstrating HTML5 features">
+            <figcaption>Figure 1: Demonstration of HTML5 features</figcaption>
+        </figure>
+        
+        <h3>Audio </h3>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <h3>Video </h3>
+        <video width="600" controls poster="https://via.placeholder.com/600x300">
+            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="form">
+        <h2>Advanced HTML5 Form</h2>
+        <p>Fields marked with <span class="required">*</span> are required.</p>
+        
+        <form id="registration" action="#" method="post" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" required minlength="3" 
+                       placeholder="Enter your full name" autocomplete="name">
+                
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="example@domain.com" autocomplete="email">
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" 
+                       placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       title="Please enter a phone number in the format: 123-456-7890">
+                
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" max="2025-01-01">
+                
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="18" max="120" 
+                       placeholder="Must be 18 or older">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <label for="username">Username <span class="required">*</span></label>
+                <input type="text" id="username" name="username" required minlength="4" 
+                       placeholder="4-12 characters" pattern="[a-zA-Z0-9]+"
+                       title="Only letters and numbers allowed">
+                
+                <label for="password">Password <span class="required">*</span></label>
+                <input type="password" id="password" name="password" required 
+                       minlength="8" placeholder="Minimum 8 characters">
+                
+                <label for="confirm-password">Confirm Password <span class="required">*</span></label>
+                <input type="password" id="confirm-password" name="confirm-password" required
+                       placeholder="Re-enter your password">
+                
+                <label for="security-question">Security Question</label>
+                <select id="security-question" name="security-question">
+                    <option value="">Select a question</option>
+                    <option value="pet">What was your first pet's name?</option>
+                    <option value="school">What was your first school?</option>
+                    <option value="city">In what city were you born?</option>
+                </select>
+                
+                <label for="security-answer">Security Answer</label>
+                <input type="text" id="security-answer" name="security-answer">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <label>Preferred Contact Method</label>
+                <label><input type="radio" name="contact-method" value="email" checked> Email</label>
+                <label><input type="radio" name="contact-method" value="phone"> Phone</label>
+                <label><input type="radio" name="contact-method" value="mail"> Postal Mail</label>
+                
+                <label>Interests (Select all that apply)</label>
+                <label><input type="checkbox" name="interests" value="web-dev"> Web Development</label>
+                <label><input type="checkbox" name="interests" value="design"> Graphic Design</label>
+                <label><input type="checkbox" name="interests" value="marketing"> Digital Marketing</label>
+                <label><input type="checkbox" name="interests" value="data"> Data Science</label>
+                
+                <label for="newsletter">Subscribe to newsletter?</label>
+                <select id="newsletter" name="newsletter">
+                    <option value="yes">Yes, please</option>
+                    <option value="no" selected>No, thanks</option>
+                </select>
+                
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="4" 
+                          placeholder="Tell us about yourself (max 200 characters)" maxlength="200"></textarea>
+                
+                <label for="website">Website (if any)</label>
+                <input type="url" id="website" name="website" 
+                       placeholder="https://example.com">
+                
+                <label for="favcolor">Favorite Color</label>
+                <input type="color" id="favcolor" name="favcolor" value="#3498db">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <label for="experience">Years of Experience</label>
+                <input type="range" id="experience" name="experience" min="0" max="20" value="5">
+                <output for="experience" id="experience-output">5</output>
+                
+                <script>
+                    document.getElementById('experience').addEventListener('input', function() {
+                        document.getElementById('experience-output').value = this.value;
+                    });
+                </script>
+                
+                <label for="resume">Upload Resume (PDF only)</label>
+                <input type="file" id="resume" name="resume" accept=".pdf">
+                
+                <label for="reference-id">Reference ID (if applicable)</label>
+                <input type="text" id="reference-id" name="reference-id" readonly value="WEB2023">
+            </fieldset>
+            
+            <div>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Advanced HTML5 Demonstration. All rights reserved.</p>
+    </footer>
+</body>
+</html>
